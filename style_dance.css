@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+    color: #fff;
+  }
+  html,body {
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  #nav {
+    height: 130px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 70px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+  #nav img {
+    height: 3.5vw;
+  }
+  #nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.15vw;
+  }
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+  } 
+  
+  #main {
+    position: relative;
+    background-color: rgba(36, 34, 34, 0.39);
+  }
+  
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    padding: 10px;
+  }
+  #page1 h1 {
+    font-size: 7.5vw;
+    font-weight: 900;
+    position: relative;
+  }
+  #page1 h1::before {
+    content: "Beat.Vibe.Dance";
+    position: absolute;
+    color: #000;
+    top: -3px;
+    left: -4px;
+    -webkit-text-stroke: 1.5px #e380e5; 
+    z-index: -1;
+  }
+  #page1 h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #page1 p {
+    font-size: 1.2vw;
+    font-weight: 500;
+    width: 40%;
+  }
+
+  #page2 {
+    min-height: 90vh;
+    width: 100%;
+    z-index: 10;
+  }
+  #about-us {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+    z-index: 10;
+    justify-content: space-around;
+  }
+  #about-us img {
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+  }
+  #about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  #about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  #page3{
+    min-height: 70vh;
+    width: 100%;
+    margin-top: -150px;
+  }
+
+  #page3 h1{
+  text-align: center;
+  font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  #cards-container {
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+  }
+  .card {
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+  }
+  #card1 {
+    background-image: url(https://wallpapercave.com/wp/wp3007366.jpg);
+  }
+  #card2 {
+    background-image: url(https://www.thedanceworx.com/images/02-choreography.jpg);
+  }
+  #card3 {
+    background-image: url(https://tse2.mm.bing.net/th?id=OIP.2fV_Q4uTRkVYYMwYVigf2wHaEK&pid=Api&P=0&h=180);
+  }
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color:  #fea4fedc;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+  }
+  .overlay h4 {
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  .overlay p {
+    color: #000;
+    font-size: 18px;
+  }
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+  
+  #green-div {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    background: linear-gradient(to left bottom,  #703e71, #fea4fedc);
+  }
+  #green-div h4 {
+    width: 45%;
+    line-height: 50px;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    text-transform: uppercase;
+  }
+  #green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+    
+  }
+  #green-div .abc{
+    transform: rotate(180deg);
+  }
+  #page4{
+    min-height: 60vh;
+    /* width: unset; */
+    margin-bottom: 10px;
+    height: 100vj;
+    background-image: url('https://www.thedanceworx.com/images/testimonials-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    display: inline-block;
+    position: relative;
+  }
+  .abcd{
+    margin-left: 840px;
+    padding-top: 100px;
+    font-size: 40px;
+   /* margin-top: 200px; */
+    /* float: right; */
+  }
+  #page5{
+    margin-top: 55px;
+  }
+  #slider{
+    min-height: 30vh;
+    width: 37vw;
+    background-color: #e380e5bb;
+    /* display: inline-block; */
+    float: right;
+    margin-top: 80px;
+    margin-left: 800px;
+    /* margin-right: -80px; */
+    border-radius: 0px 100px 0px 70px;
+  }
+
+
+  /* * {box-sizing: border-box} */
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #3d3c3c;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+    border-radius: 0px 0px 0px 120px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;
+  font-size: 20px;
+}
+
+/* Add a blue color to the author */
+.author {color: rgb(40, 76, 143);
+  font-size: larger;
+}
+
+@media (max-width: 600px) {
+/* nav bar */
+  #nav h4{
+    /* margin-right: -20px; */
+    padding: 15px;
+    font-size: 35px;
+  }
+  #main{
+    width: 500%;
+  }
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+  #page1 h1 {
+    font-size: 9.5vw;
+    font-weight: 900;
+    position: relative;
+    margin-top: 100px;
+    margin-right: 300px;
+  }
+
+  #page1 h2 {
+    font-size: 39px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 300px;
+  }
+  #page1 p {
+    font-size: 5.2vw;
+    font-weight: 500;
+    width: 40%;
+    margin-right: 350px;
+
+  }
+  #about-us {
+    height: 40vh;
+    width: 80%;
+    margin-top: 100px;
+  }
+  #about-us img {
+    height: 270px;
+    width: 270px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  #about-us-in {
+    width: 50%;
+  }
+  #about-us-in h3 {
+    font-size: 60px;
+  }
+  #about-us-in p {
+    font-size: 32px;
+    line-height: 28px;
+  }
+  #page3{
+    min-height: 70vh;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #page3 h1{
+  margin-right: 300px;
+  font-size: 65px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+  }
+ 
+  .card {
+    height: 100%;
+    width: 18%;
+    margin-right: 200px;
+
+  }
+  /* .overlay {
+    height: 100%;
+    width: 100%;
+    background-color:  #fea4fedc;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+  } */
+  
+  /* .overlay p {
+    color: #000;
+    font-size: 18px;
+  } */
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+    opacity: 0.5;
+    /* transition: all ease 0.6s; */
+
+  }
+  #page4{
+    min-height: 80vh;
+    width: 80%;
+  }
+  #slider{
+    min-height: 20vh;
+    width: 40%;
+    margin-right: 200px;
+  }
+  #green-div {
+    height: 25vh;
+    width: 80%
+  }
+  #green-div h4 {
+    font-size: 40px;
+  }
+}
+@media (min-width:600px) and (max-width:1000px) {
+  #slider{
+    min-height: 30vh;
+    width: 65vw;
+    margin-left: 1000px;
+  }
+  #main{
+    width: 200%;
+  }
+  #page1 h1 {
+    font-size: 9.5vw;
+  }
+  #page1 h2{
+    font-size: 9.5vw;
+  }
+  #page1 p {
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width:300px) and (max-width:400px){
+  #nav{
+    padding: 9px;
+  }
+  #slider{
+    margin-right: 70px;
+  }
+  .card{
+   margin: 50px;
+   height: 400px;
+  }
+  #card3{
+    margin-right: 365px;
+  }
+  }
+@media (min-width:400px) and (max-width:600px) {
+  #card3{
+    margin-right: 550px;  }
+    .card{
+      margin: 100px;
+      height: 400px;
+    }
+    .abcd{
+      margin-left: 1000px;
+    }
+}
+@media (min-width:425px) and (max-width:780px) {
+  #slider{
+  margin-left: 850px;
+  /* width: -9000px; */
+  }
+  #nav h4 {
+  
+    font-weight: 500;
+  
+    font-size: 3.15vw;
+  }
+  #page1 p {
+    font-size: 4vw;
+  }
+  .abcd{
+    margin-left: 900px;
+  }
+}
+@media (min-width:1000px) and (max-width:1200px){
+  #main{
+    width: 120%;
+  }
+  #nav h4 {
+  
+    font-weight: 500;
+  
+    font-size: 2.15vw;
+  }
+  #page1 p {
+    font-size: 2vw;
+  }
+}

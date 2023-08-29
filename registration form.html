@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="indexform.css">
+  <title>Registration form</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="" method="post" id="form">
+                    <h2>Registration Form</h2>
+                    <div class="inputbox">
+                        Username<input type="name" name="sname" placeholder="Enter Your NAME" required>
+                    </div>
+                    <div class="inputbox">
+                        Phone NO<input type="number" name="Nname" placeholder="Enter Your PHONE NO" required>
+                    </div>
+                    <div class="inputbox">
+                        Email-Id<input type="email" name="ename" id="email" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="inputbox">
+                        Password<input type="password" name="pname" id="password" placeholder="Enter Your Password" required>
+                    </div>
+                    <button  id="smit" type="submit"><a href="loginform.html">Register now</a></button>
+                    <button  id="smit" type="button"><a href="slice.html">Cancel</a></button>
+                </form>
+            </div></div>
+    </section>
+</body>
+<script>
+    var form=document.getElementById('form')
+    form.addEventListener('submit',function(event){
+        event.preventDefault() //prevent form for autosubmiting
+        var email=document.getElementById('email').value
+        console.log(email)
+        var password=document.getElementById('password').value
+        console.log(password)
+        document.write("email is="+email);
+        document.write("password is"=password);});
+
+</script>
+</html>
